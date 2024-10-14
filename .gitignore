@@ -1,0 +1,84 @@
+# Sistema MacOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Pastas de arquivos de rede ou de armazenamento de mídia
+Icon
+__MACOSX
+
+# Arquivos de log criados por aplicativos
+*.log
+
+# Arquivos temporários
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# Bytecode Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Configurações do IDE/Editor
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Arquivos gerados pelo projeto
+saida/
+
+# Arquivos de banco de dados SQLite
+*.db
+*.sqlite3
+
+# Arquivos de cache
+*.cache
+*.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Arquivos de configuração de sistema
+*.bak
+*.old
+
+# Arquivos de instalação
+*.egg-info/
+*.eggs/
+
+# Arquivos compactados
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Logs e relatórios
+*.log
+*.out
+*.err
+coverage/
+coverage.*.xml
+*.cover
+
+# Arquivos de configuração do MacOS
+**/.DS_Store
+**/.AppleDouble
+**/.LSOverride
+
+# Arquivos e diretórios específicos de editor/IDE
+/shelf/
+/workspace.xml
+/httpRequests/
+/dataSources/
+/dataSources.local.xml
+/volume

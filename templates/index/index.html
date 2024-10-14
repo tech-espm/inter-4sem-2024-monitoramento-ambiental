@@ -1,0 +1,33 @@
+<!-- templates/index/index.html -->
+
+{% extends 'layout.html' %}
+
+{% block content %}
+<h2>Dados dos Sensores</h2>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Data</th>
+            <th>Direção do Vento</th>
+            <th>Umidade do Solo</th>
+            <th>Umidade do Ar</th>
+            <th>Temperatura</th>
+            <th>Luminosidade</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for leitura in leituras %}
+        <tr>
+            <td>{{ leitura.id_leitura }}</td>
+            <td>{{ leitura.data.strftime('%Y-%m-%d %H:%M:%S') }}</td>
+            <td>{{ leitura.direcao_vento }}</td>
+            <td>{{ leitura.umidade_solo }}</td>
+            <td>{{ leitura.umidade_ar }}</td>
+            <td>{{ leitura.temperatura }}</td>
+            <td>{{ leitura.luminosidade }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
