@@ -13,4 +13,4 @@ if __name__ == '__main__':
 
     # Registra as 'blueprints' usando a função do imports.py
     register_blueprints(app)
-    app.run(port=6060 ,debug=True)
+    app.run(port=6060, host='0.0.0.0', debug=True)
