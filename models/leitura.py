@@ -9,7 +9,6 @@ class Leitura(db.Model):
     id_leitura = db.Column(db.Integer, primary_key=True, autoincrement=True)
     data = db.Column(db.DateTime, default=datetime.utcnow, nullable=False)
     direcao_vento = db.Column(db.Float, nullable=False)
-    umidade_solo = db.Column(db.Float, nullable=False)
     umidade_ar = db.Column(db.Float, nullable=False)
     temperatura = db.Column(db.Float, nullable=False)
     luminosidade = db.Column(db.Float, nullable=False)

@@ -12,7 +12,6 @@ def add_leitura():
         logging.debug(f'Dados recebidos: {data}')
         nova_leitura = Leitura(
             direcao_vento=float(data['direcao_vento']),
-            umidade_solo=float(data['umidade_solo']),
             umidade_ar=float(data['umidade_ar']),
             temperatura=float(data['temperatura']),
             luminosidade=float(data['luminosidade'])
