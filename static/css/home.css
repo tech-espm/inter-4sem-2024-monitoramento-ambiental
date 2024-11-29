@@ -1,0 +1,150 @@
+/* Paleta de cores vibrante e tipografia moderna */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header {
+  position: relative;
+  height: 100vh;
+  background-image: url("https://www.paripassu.com.br/hubfs/Imported_Blog_Media/solo-terra-banner.jpg"); /* Substitua com o caminho da imagem de fundo */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Sobreposição escura */
+}
+
+.header-container {
+  position: relative;
+  text-align: center;
+  color: white;
+  z-index: 2;
+}
+
+.header-container h1 {
+  font-size: 48px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.header-container p {
+  font-size: 22px;
+  margin: 15px 0;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #ff5722;
+  color: white;
+  font-size: 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #e64a19;
+}
+
+main {
+  padding: 40px 20px;
+}
+
+.sensor-data {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.sensor-data h2 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.sensor-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  margin: 20px 0;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sensor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.sensor-card h3 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #ff5722;
+}
+
+.sensor-card p {
+  font-size: 20px;
+  color: #555;
+}
+
+.report {
+  text-align: center;
+  padding: 40px;
+  background-color: #ffeb3b; /* Amarelo vibrante */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.report h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.report p {
+  font-size: 20px;
+  color: #555;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  header {
+    height: 60vh;
+  }
+
+  .header-container h1 {
+    font-size: 36px;
+  }
+
+  .header-container p {
+    font-size: 18px;
+  }
+
+  .button {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard de Sensores</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/arduino.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='chart.js/chart.min.js') }}"></script>
+  </head>
+  <body>
+
+    <header>
+      <h1>Dashboard de Sensores Arduino</h1>
+    </header>
+
+    <div class="container">
+      <!-- Primeira linha: Direção do Vento e Umidade do Solo -->
+      <div class="card" id="vento-card">
+        <h2>Direção do Vento</h2>
+        <p id="vento">--</p>
+      </div>
+      <div class="card" id="umidade-card">
+        <h2>Umidade do Solo</h2>
+        <p id="umidade">--</p>
+      </div>
+
+      <!-- Segunda linha: Captação de Luz -->
+      <div class="card" id="luz-card">
+        <h2>Captação de Luz</h2>
+        <p id="luz">--</p>
+      </div>
+
+      <!-- Gráficos: Agora lado a lado -->
+      <div class="graficos-container">
+        <div class="card" id="vento-chart-card">
+          <canvas id="ventoChart"></canvas>
+        </div>
+        <div class="card" id="umidade-chart-card">
+          <canvas id="umidadeChart"></canvas>
+        </div>
+        <div class="card" id="luz-chart-card">
+          <canvas id="luzChart"></canvas>
+        </div>
+      </div>
+
+      <!-- Relatório do dia -->
+      <div id="relatorio">
+        <h2>Relatório do Dia</h2>
+        <p id="resumo-relatorio">Nenhum dado disponível.</p>
+      </div>
+    </div>
