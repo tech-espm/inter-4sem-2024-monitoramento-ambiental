@@ -1,8 +1,21 @@
-<!-- templates/index/sobre.html -->
+﻿{% extends 'layout.html' %}
 
-{% extends 'layout.html' %}
+{% block body %}
 
-{% block content %}
-<h2>Sobre o Projeto</h2>
-<p>Este projeto foi desenvolvido para monitorar e apresentar dados de sensores ambientais.</p>
+<style>
+	.conteudo {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+</style>
+
+<div class="container-fluid text-center">
+
+	<h1>Sobre o Projeto</h1>
+
+	<marquee>Este projeto foi desenvolvido para monitorar e apresentar dados de sensores ambientais.</marquee>
+
+</div>
+
 {% endblock %}

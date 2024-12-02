@@ -1,0 +1,151 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<style>
+	.profiles {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		padding: 20px;
+	}
+
+	.profile-card {
+		background-color: #fff;
+		border-radius: 10px;
+		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+		margin: 20px;
+		padding: 20px;
+		text-align: center;
+		width: 300px;
+		transition: transform 0.3s ease;
+	}
+
+	.profile-card:hover {
+		transform: translateY(-10px);
+	}
+
+	.profile-card img {
+		width: 100px;
+		height: 100px;
+		border-radius: 50%;
+		object-fit: cover;
+	}
+
+	.profile-card h2 {
+		margin: 10px 0;
+		font-size: 1.5em;
+	}
+
+	.profile-card .role {
+		color: #e74c3c;
+		font-size: 1.2em;
+		margin-bottom: 10px;
+	}
+
+	.profile-card p {
+		font-size: 0.9em;
+		color: #777;
+		margin-bottom: 20px;
+	}
+
+	.social-icons a {
+		margin: 0 10px;
+		font-size: 1.2em;
+		color: #333;
+		text-decoration: none;
+		transition: color 0.3s ease;
+	}
+
+	.social-icons a:hover {
+		color: #e74c3c;
+	}
+
+	@media (max-width: 768px) {
+		.profiles {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.profile-card {
+			width: 90%;
+		}
+	}
+</style>
+
+<div class="container-fluid text-center">
+	<section class="profiles">
+		<div class="profile-card">
+			<img src="/static/img/fotos/foto_Antonio.png" alt="foto" />
+			<h2>Antonio</h2>
+			<h3 class="role">Gerente de Projetos de TI</h3>
+			<p>
+				Lidera projetos complexos, garantindo a entrega no prazo e orçamento. Focado na otimização de processos,
+				ele tem equipes para resultados de alta qualidade.
+			</p>
+			<div class="social-icons">
+				<a href="#"><i class="fa-brands fa-github-alt"></i></a>
+				<a href="#"><i class="fa-brands fa-linkedin"></i></a>
+			</div>
+		</div>
+
+		<div class="profile-card">
+			<img src="/static/img/fotos/foto_Massaro.png" alt="foto" />
+			<h2>Bruno Massaro</h2>
+			<h3 class="role">Engenheiro de Machine Learning</h3>
+			<p>
+				Desenvolve algoritmos de inteligência artificial, aplicando modelos preditivos e soluções inovadoras
+				para resolver problemas empresariais de maneira eficiente.
+			</p>
+			<div class="social-icons">
+				<a href="#"><i class="fa-brands fa-github-alt"></i></a>
+				<a href="#"><i class="fa-brands fa-linkedin"></i></a>
+			</div>
+		</div>
+
+		<div class="profile-card">
+			<img src="/static/img/fotos/foto_Assis.jpg" alt="foto" />
+			<h2>Bruno Assis</h2>
+			<h3 class="role">Cientista de Dados</h3>
+			<p>
+				Especialista em análise de grandes volumes de dados para extrair insights estratégicos. Ele cria modelos
+				preditivos e ajuda empresas a tomar decisões baseadas em dados, com um foco em segurança cibernética e
+				otimização de infraestrutura.
+			</p>
+			<div class="social-icons">
+				<a href="#"><i class="fa-brands fa-github-alt"></i></a>
+				<a href="#"><i class="fa-brands fa-linkedin"></i></a>
+			</div>
+		</div>
+
+		<div class="profile-card">
+			<img src="/static/img/fotos/foto_Luigi.png" alt="foto" />
+			<h2>Luigi</h2>
+			<h3 class="role">Desenvolvedor Fullstack</h3>
+			<p>
+				Desenvolvedor versátil, com domínio em front e back-end. Ele desenvolveu soluções web robustas, com foco
+				em desempenho e experiência do usuário.
+			</p>
+			<div class="social-icons">
+				<a href="#"><i class="fa-brands fa-github-alt"></i></a>
+				<a href="#"><i class="fa-brands fa-linkedin"></i></a>
+			</div>
+		</div>
+
+		<div class="profile-card">
+			<img src="/static/img/fotos/foto_Vini.jpg" alt="foto" />
+			<h2>Vinicius</h2>
+			<h3 class="role">Designer de UX/UI</h3>
+			<p>
+				Cria experiências digitais intuitivas e intuitivas, priorizando a usabilidade e a satisfação do usuário.
+				Ele transforma requisitos de negócio em interfaces funcionais e visuais modernas.
+			</p>
+			<div class="social-icons">
+				<a href="#"><i class="fa-brands fa-github-alt"></i></a>
+				<a href="#"><i class="fa-brands fa-linkedin"></i></a>
+			</div>
+		</div>
+	</section>
+</div>
+
+{% endblock %}
