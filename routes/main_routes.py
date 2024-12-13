@@ -26,50 +26,18 @@ def dadosPorDia():
 
 @main_routes.route('/dadosPorHoraJson')
 def dadosPorHoraJson():
-    print(request.args.get('data'))
+    data = request.args.get('data')
+    data_inicial = data + ' 00:00:00'
+    data_final = data + ' 23:59:59'
 
-    # leituras = Leitura.query.order_by(Leitura.data.desc()).all()
-    leituras = [
-        {
-            'hora': '10:00',
-            'direcao_vento': 80,
-            'umidade_ar': 40,
-            'temperatura': 35,
-            'luminosidade': 50
-        },
-        {
-            'hora': '11:00',
-            'direcao_vento': 85,
-            'umidade_ar': 45,
-            'temperatura': 40,
-            'luminosidade': 55
-        },
-    ]
+    leituras = Leitura.listarPorHora(data_inicial, data_final)
 
     return json.jsonify(leituras)
 
 
 @main_routes.route('/dadosPorDiaJson')
 def dadosPorDiaJson():
-    print(request.args.get('mes'))
-
-    # leituras = Leitura.query.order_by(Leitura.data.desc()).all()
-    leituras = [
-        {
-            'dia': '01/11',
-            'direcao_vento': 80,
-            'umidade_ar': 40,
-            'temperatura': 35,
-            'luminosidade': 50
-        },
-        {
-            'dia': '02/11',
-            'direcao_vento': 85,
-            'umidade_ar': 45,
-            'temperatura': 40,
-            'luminosidade': 55
-        },
-    ]
+    leituras = Leitura.listarPorDia(int(request.args.get('ano')), int(request.args.get('mes')))
 
     return json.jsonify(leituras)
 
